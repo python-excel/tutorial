@@ -1,0 +1,5 @@
+text:u'S2R1CA'
+S2R1CA
+True
+1 S2R2CA
+1 S2R2CB

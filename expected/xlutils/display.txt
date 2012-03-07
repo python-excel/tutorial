@@ -1,0 +1,6 @@
+People
+'Price(\xc2\xa3)'
+'My Sheet'
+'John''s Sheet'
+text (Adam Adamson)
+date (1978-06-13 00:00:00)

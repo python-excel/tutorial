@@ -1,0 +1,3 @@
+<xlrd.Book object at ...>
+<xlrd.Book object at ...>
+<xlrd.Book object at ...>

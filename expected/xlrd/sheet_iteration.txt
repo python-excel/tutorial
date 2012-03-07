@@ -1,0 +1,16 @@
+[text:u'S1R1CA', text:u'S1R1CB', text:u'S1R1CC']
+[text:u'S1R1CA', text:u'S1R2CA']
+
+[text:u'S1R1CB', text:u'S1R1CC']
+[text:u'S1R1CB']
+[u'S1R1CB', u'S1R1CC']
+[u'S1R1CB']
+array('B', [1, 1])
+array('B', [1])
+
+[text:u'S2R2CA', text:u'S2R3CA']
+[text:u'S1R2CA']
+[u'S2R2CA', u'S2R3CA']
+[u'S1R2CA']
+[1, 1]
+[1]

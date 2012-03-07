@@ -1,0 +1,8 @@
+2
+<xlrd.sheet.Sheet object at ...>
+<xlrd.sheet.Sheet object at ...>
+[u'Sheet1', u'Sheet2']
+<xlrd.sheet.Sheet object at ...>
+<xlrd.sheet.Sheet object at ...>
+<xlrd.sheet.Sheet object at ...>
+<xlrd.sheet.Sheet object at ...>

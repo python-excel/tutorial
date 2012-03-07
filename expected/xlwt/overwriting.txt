@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "py-script.py", line 28, in <module>
+    execfile(sys.argv[0])
+  File "overwriting.py", line 11, in <module>
+    sheet2.write(0,0,'new')
+  File "Worksheet.py", line 1003, in write
+  File "Row.py", line 231, in write
+  File "Row.py", line 150, in insert_cell
+Exception: Attempt to overwrite cell: sheetname=u'Sheet 2' rowx=0 colx=0

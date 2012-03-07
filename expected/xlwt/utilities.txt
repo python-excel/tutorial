@@ -1,0 +1,19 @@
+AA -> 26
+A -> 0
+A1 -> (0, 0, False, False)
+$A$1 -> (0, 0, True, True)
+A1 -> (0, 0)
+(0, 0) -> A1
+(0, 0, False, True) -> $A1
+(0, 0, True, True) -> $A$1
+1:3 -> (0, 0, 2, -1)
+B:G -> (0, 1, -1, 6)
+A2:B7 -> (1, 0, 6, 1)
+A1 -> (0, 0, 0, 0)
+(0, 0, 100, 100) -> A1:CW101
+(0, 0, 100, 100, True, False, False, False) -> A$1:$CW101
+Is '' a valid sheet name? No
+Is "'quoted'" a valid sheet name? No
+Is "O'hare" a valid sheet name? Yes
+Is 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' a valid sheet name? No
+Is '[]:\\?/*\x00' a valid sheet name? No
