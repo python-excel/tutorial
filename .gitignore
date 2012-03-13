@@ -1,0 +1,3 @@
+buildout/.installed.cfg
+buildout/bin
+buildout/parts
