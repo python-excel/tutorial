@@ -10,7 +10,7 @@ from subprocess import call,STDOUT
 from tempfile import TemporaryFile
 from testfixtures import diff
 
-runner = abspath(j(os.path.split(__file__)[0],'py'))
+runner = abspath(j(os.path.split(__file__)[0], 'bin', 'py'))
 
 sub_res = [
     (compile('0+x[0-9A-Fa-f]+'),'...'),
@@ -30,7 +30,7 @@ for path in ('xlrd','xlwt','xlutils'):
         
         output = TemporaryFile('w+')
         expected_base = j(expected_dir,os.path.splitext(name)[0])
-        
+
         call([runner,py],stdout=output,stderr=STDOUT)
 
         after_listing = set(os.listdir(dir))
