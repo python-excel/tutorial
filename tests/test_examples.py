@@ -41,8 +41,9 @@ def check_example(package, filename):
         with TempDirectory() as actual:
             # copy files to the directory
             copy(path.join(example_dir, filename), actual.path)
-            for xls in glob(path.join(example_dir, '*.xls')):
-                copy(xls, actual.path)
+            for pattern in ('*.xls', '*.bmp'):
+                for fixture in glob(path.join(example_dir, pattern)):
+                    copy(fixture, actual.path)
 
             os.chdir(actual.path)
             output = TemporaryFile('w+')
