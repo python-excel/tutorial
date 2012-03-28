@@ -51,7 +51,20 @@ def check_example(package, filename):
             before_listing = set(os.listdir(actual.path))
             call([runner, filename], stdout=output, stderr=STDOUT)
             after_listing = set(os.listdir(actual.path))
-            
+
+            # check the console output
+            output.seek(0)
+            actual_output = output.read().strip().replace('\r', '')
+            for re, rp in sub_res:
+                actual_output = re.sub(rp, actual_output)
+            expected_path = expected_base+'.txt'
+            if not path.exists(expected_path):
+                expected_output = ''
+            else:
+                expected_output = open(expected_path).read().strip().replace('\r', '')
+            compare(expected_output, actual_output)
+
+            # check the files created
             created = after_listing.difference(before_listing)
 
             expected_names = set()
@@ -79,18 +92,9 @@ def check_example(package, filename):
             
             for name in expected_names:
                 if name != '.svn':
+                    print created
                     raise AssertionError("expected output missing: %s" % name)
         
-            output.seek(0)
-            actual_output = output.read().strip().replace('\r', '')
-            for re, rp in sub_res:
-                actual_output = re.sub(rp, actual_output)
-            expected_path = expected_base+'.txt'
-            if not path.exists(expected_path):
-                expected_output = ''
-            else:
-                expected_output = open(expected_path).read().strip().replace('\r', '')
-            compare(expected_output, actual_output)
             
     finally:
         os.chdir(initial)
