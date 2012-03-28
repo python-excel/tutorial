@@ -4,7 +4,7 @@ import os
 
 from cStringIO import StringIO
 from glob import glob
-from os import path
+from os import path, environ
 from os.path import abspath
 from re import compile
 from shutil import copy
@@ -63,9 +63,13 @@ def check_example(package, filename):
                     actual_data = af.read()
 
                 if name in expected_names:
-                    expected_data = open(path.join(expected_base, name), 'rb').read()
+                    expected_path = path.join(expected_base, name)
+                    expected_data = open(expected_path, 'rb').read()
                     expected_names.remove(name)
                     if actual_data != expected_data:
+                        if environ.get('REPLACE_EXAMPLES'):
+                            with open(expected_path, 'wb') as new_expected:
+                                new_expected.write(actual_data)
                         compare(
                             get_biff_records(expected_data),
                             get_biff_records(actual_data),
