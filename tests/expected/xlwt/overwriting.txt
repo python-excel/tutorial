@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "bin/py", line 33, in <module>
+    execfile(__file__)
+  File "overwriting.py", line 11, in <module>
+    sheet2.write(0,0,'new')
+  File "Worksheet.py", line 1032, in write
+    self.row(r).write(c, label, style)
+  File "Row.py", line 233, in write
+    StrCell(self.__idx, col, style_index, self.__parent_wb.add_str(label))
+  File "Row.py", line 152, in insert_cell
+    raise Exception(msg)
+Exception: Attempt to overwrite cell: sheetname=u'Sheet 2' rowx=0 colx=0
