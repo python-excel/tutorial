@@ -2,7 +2,7 @@ This repo is the home of an effort to turn the orignal tutorial covering [xlrd][
 
 It is currently stalled and likely always will be. In the meantime, here's a link to a PDF rendering of the original Open Office document: 
 
-http://www.simplistix.co.uk/presentations/python-excel.pdf
+https://github.com/python-excel/tutorial/raw/master/python-excel.pdf
 
 [1]: https://github.com/python-excel/xlrd
 [2]: https://github.com/python-excel/xlwt
