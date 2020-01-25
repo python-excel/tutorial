@@ -3,6 +3,7 @@ from xlrd import open_workbook,xldate_as_tuple
 
 book = open_workbook('types.xls')
 sheet = book.sheet_by_index(0)
+import math
 
 date_value = xldate_as_tuple(sheet.cell(3,2).value,book.datemode)
 print datetime(*date_value),date(*date_value[:3])
